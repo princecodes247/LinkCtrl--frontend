@@ -11,6 +11,7 @@ LinkCtrl has a simple and intuitive interface, and is designed to be easy to use
 - Custom link endpoints - You can create your own custom endpoints for your links.
 - Custom domains - Use your own domain name.
 - Link analytics - Track link clicks and views.
+- Notifications - Get notified when your link is clicked.
 - Link expiration - Set a link expiration date.
 - Link Limit - Limit the number of clicks on a link.
 - Link Limit per IP - Limit the number of clicks on a link per IP.
