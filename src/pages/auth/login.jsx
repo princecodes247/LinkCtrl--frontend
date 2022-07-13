@@ -36,7 +36,7 @@ function Login() {
           </label>
         </div>
         <div className="form-group">
-          <Button>Login</Button>
+          <Button to="dashboard">Login</Button>
         </div>
       </form>
     </AuthLayout>
