@@ -16,20 +16,22 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Auth Routes */}
-        <Route path="register" element={<Register />} />
-        <Route path="login" element={<Login />} />
+    <body className="bg-black">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Auth Routes */}
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
 
-        {/* User Routes */}
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="project" element={<Project />} />
-        <Route path="project/:projectID" element={<Project />} />
-        <Route path="settings" element={<Settings />} />
-        {/* <Route path="dashboard" element={<Dashboard />} /> */}
-      </Routes>
-    </BrowserRouter>
+          {/* User Routes */}
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="project" element={<Project />} />
+          <Route path="project/:projectID" element={<Project />} />
+          <Route path="settings" element={<Settings />} />
+          {/* <Route path="dashboard" element={<Dashboard />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </body>
   </React.StrictMode>
 );
