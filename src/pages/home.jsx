@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 // import './Home.css'
 import Header from '../components/Header';
@@ -14,7 +15,7 @@ function Home() {
       <Header />
 
       <section className="flex flex-col items-center justify-center w-full h-screen">
-        <h1 className="text-center text-9xl font-title">
+        <h1 className="text-center text-6xl md:text-9xl font-title">
           <span>Shorten</span>
           <br />
           <span>Share</span>
@@ -22,8 +23,8 @@ function Home() {
           <span>Track</span>
           <br />
         </h1>
-        <div className="flex flex-col w-2/6 gap-5 sm:flex-row">
-          <Button>Try for free</Button>
+        <div className="flex mt-12 flex-col w-4/5 sm:w-3/6 md:2/6 gap-5 sm:flex-row">
+          <Button to="register">Try for free</Button>
           <Button>See Pricing</Button>
         </div>
       </section>
