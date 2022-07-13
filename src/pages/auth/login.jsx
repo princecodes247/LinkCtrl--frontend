@@ -1,13 +1,45 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { AuthLayout } from '../../layouts';
 // import React, { useState } from 'react';
+import Button from '../../components/Button';
 
 function Login() {
   return (
-    <footer className="flex justify-center p-4">
-      <Link to="/">Expenses</Link>
-      <div className="App-header">LinkCtrl footer</div>
-    </footer>
+    <AuthLayout>
+      <h1 className="text-5xl">Login</h1>
+      <form className="flex flex-col">
+        <div className="form-group flex flex-col">
+          <label htmlFor="email">
+            <p>Email address</p>
+            <input
+              type="email"
+              className="form-control p-2 rounded-sm"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </label>
+          <small id="emailHelp" className="form-text text-muted">
+            We&apos;ll never share your email with anyone else.
+          </small>
+        </div>
+
+        <div className="form-group flex flex-col">
+          <label htmlFor="password">
+            <p>Password</p>
+            <input
+              type="password"
+              className="form-control p-2 rounded-sm"
+              id="password"
+              placeholder="Password"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <Button>Login</Button>
+        </div>
+      </form>
+    </AuthLayout>
   );
 }
 
