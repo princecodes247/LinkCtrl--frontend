@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function ProjectCard({ projectID }) {
   return (
-    <Link to={`project/${projectID}`}>
+    <Link to={`/project/${projectID}`}>
       <div className="p-4 flex justify-center">
         <p>Name</p>
       </div>
