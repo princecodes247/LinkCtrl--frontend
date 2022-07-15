@@ -19,7 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <body className="bg-black"> */}
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* Landing Page */}
+        <Route index element={<Home />} />
         {/* Auth Routes */}
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
@@ -30,6 +31,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="project/:projectID" element={<Project />} />
         <Route path="settings" element={<Settings />} />
         {/* <Route path="dashboard" element={<Dashboard />} /> */}
+
+        {/* 404 Route */}
+        <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Routes>
     </BrowserRouter>
     {/* </body> */}
