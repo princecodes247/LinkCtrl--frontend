@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthLayout } from '../../layouts';
+import { AuthLayout } from '../../components/layouts';
 // import React, { useState } from 'react';
 import Button from '../../components/Button';
 
