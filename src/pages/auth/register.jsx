@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { AuthLayout } from '../../layouts';
+import { AuthLayout } from '../../components/layouts';
 // import React, { useState } from 'react';
 
 function Register() {

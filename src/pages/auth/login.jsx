@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthLayout } from '../../components/layouts';
 // import React, { useState } from 'react';
-import Button from '../../components/Button';
+import Button from '../../components/ui/Button';
 
 function Login() {
   return (

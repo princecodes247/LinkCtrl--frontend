@@ -1,8 +1,7 @@
 import React from 'react';
-// import React, { useState } from 'react';
-import { DashboardLayout } from '../../layouts';
-import Button from '../../components/Button';
 import { Link, useParams } from 'react-router-dom';
+import { DashboardLayout } from '../../components/layouts';
+// import Button from '../../components/ui/Button';
 // import React, { useState } from 'react';
 
 function Project() {

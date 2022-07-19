@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 // import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { DashboardHeader } from '../components/Header';
-import Footer from '../components/Footer';
+import { DashboardHeader } from '../ui/Header';
+import Footer from '../ui/Footer';
 
 function DashboardLayout({ children }) {
   const params = useParams();

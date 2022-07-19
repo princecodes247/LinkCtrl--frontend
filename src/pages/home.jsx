@@ -1,13 +1,13 @@
 // import React, { useState } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../components/Button';
+import Button from '../components/ui/Button';
 // import './Home.css'
-import Header from '../components/Header';
-import FeatureCard from '../components/FeatureCard';
-import Footer from '../components/Footer';
-import QuickShort from '../components/QuickShort';
-import TestimonialSection from '../components/TestimonialSection';
+import Header from '../components/ui/Header';
+import FeatureCard from '../components/ui/FeatureCard';
+import Footer from '../components/ui/Footer';
+import QuickShort from '../components/ui/QuickShort';
+import TestimonialSection from '../components/ui/TestimonialSection';
 
 function Home() {
   return (

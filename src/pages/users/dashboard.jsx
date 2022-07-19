@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import React, { useState } from 'react';
-import { DashboardLayout } from '../../layouts';
-import Button from '../../components/Button';
-import ProjectCard from '../../components/ProjectCard';
+import { DashboardLayout } from '../../components/layouts';
+// import Button from '../../components/ui/Button';
+import ProjectCard from '../../components/ui/ProjectCard';
 
 function Dashboard() {
   return (

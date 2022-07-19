@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { DashboardLayout } from '../../layouts';
-import Button from '../../components/Button';
-// import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+import { DashboardLayout } from '../../components/layouts';
+// import Button from '../../components/ui/Button';
 
 function Settings() {
   return (
