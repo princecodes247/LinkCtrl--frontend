@@ -23,9 +23,11 @@ function Home() {
           <span>Track</span>
           <br />
         </h1>
-        <div className="flex mt-12 flex-col w-4/5 sm:w-3/6 md:2/6 gap-5 sm:flex-row">
-          <Button to="register">Try for free</Button>
-          <Button>See Pricing</Button>
+        <div className="flex mt-12 flex-col w-4/5 sm:w-3/6 md:w-2/6 gap-5 sm:flex-row">
+          <Button classNames="flex-1" to="register">
+            Try for free
+          </Button>
+          <Button classNames="flex-1">See Pricing</Button>
         </div>
       </section>
       <QuickShort />
