@@ -12,16 +12,18 @@ function Dashboard() {
   return (
     <DashboardLayout>
       <div className="w-full flex items-center justify-center">
-        <div className="flex w-full gap-2 mx-12">
+        <div className="flex w-full flex-col md:flex-row gap-2 mx-12">
           <input
-            className="p-3 gap-4 rounded flex-1 bg-gray-900"
+            className="p-3 rounded flex-1 bg-opacity-50 bg-gray-900"
             type="text"
-            placeholder="Search projects..."
+            placeholder="Paste a link to shorten it..."
           />
-          <Button variant="secondary" onClick={() => {}}>
-            Quick Shorten
-          </Button>
-          <Button onClick={() => setIsModalOpen(true)}>Shorten it</Button>
+          <div className="flex gap-2  justify-end">
+            <Button variant="secondary" onClick={() => {}}>
+              Quick Shorten
+            </Button>
+            <Button onClick={() => setIsModalOpen(true)}>Shorten it</Button>
+          </div>
           {/* <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} /> */}
           <ConfigureLinkModal
             isOpen={isModalOpen}
@@ -41,7 +43,7 @@ function Dashboard() {
           <p>No projects found</p>
           <Button>Create new project</Button>
         </div> */}
-        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-8 px-4">
+        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-8 px-4">
           {[1, 2, 3, 4, 4, 4, 4, 4].map((projectID) => (
             <ProjectCard projectID={projectID} />
           ))}
