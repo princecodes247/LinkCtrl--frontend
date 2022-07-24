@@ -24,3 +24,5 @@ LinkCtrl has a simple and intuitive interface, and is designed to be easy to use
 
 - Make modal have default images and custom images
 - Make modal require only the messages to be displayed
+- Create loading spinner component
+- Add loading to Button component
