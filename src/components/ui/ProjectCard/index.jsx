@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function ProjectCard({ projectID }) {
   return (
     <Link to={`/project/${projectID}`}>
-      <div className="bg-gray-900 bg-opacity-20 hover:bg-opacity-40 p-4 flex flex-col justify-center rounded transition duration-100">
+      <div className="bg-gray-900 bg-opacity-20 group hover:bg-opacity-40 p-4 flex flex-col justify-center rounded transition duration-100">
         <div className="flex items-center justify-between">
           <h3>Ebi Campaign</h3>
           <div className="flex flex-col items-center">
@@ -21,16 +21,16 @@ function ProjectCard({ projectID }) {
           <p className="text-gray-400">https://www.google.com</p>
         </div>
         {/* <div className="my-4">Lorem ipsum dolor sit amet.</div> */}
-        <div className="flex whitespace-nowrap gap-2 mt-4 justify-between text-sm">
-          <div className="flex-1 text-center bg-gray-900 rounded px-2">
+        <div className="flex whitespace-nowrap gap-2 mt-12 justify-between text-sm">
+          <div className="flex-1 text-center group-hover:bg-opacity-90 bg-gray-900 bg-opacity-30 rounded px-2">
             <p className="text-xs">total clicks</p>
             <p className="text-base">78</p>
           </div>
-          <div className="flex-1 text-center bg-gray-900 rounded px-2">
+          <div className="flex-1 text-center group-hover:bg-opacity-90 bg-gray-900 bg-opacity-30 rounded px-2">
             <p className="text-xs">Expires in</p>
             <p className="text-base">43m</p>
           </div>
-          <div className="flex-1 text-center bg-gray-900 rounded px-2">
+          <div className="flex-1 text-center group-hover:bg-opacity-90 bg-gray-900 bg-opacity-30 rounded px-2">
             <p className="text-xs">clicks left</p>
             <p className="text-base">4</p>
           </div>
