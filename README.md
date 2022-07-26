@@ -24,5 +24,14 @@ LinkCtrl has a simple and intuitive interface, and is designed to be easy to use
 
 - Make modal have default images and custom images
 - Make modal require only the messages to be displayed
+- And functionality to Configure Link Modal
 - Create loading spinner component
 - Add loading to Button component
+- Update button colors
+- Update register page
+- Fix alignments in project page
+- Add graphs to project page
+- Create settings page
+- Make navigation routing work
+- Finish create link dialog
+- Connect to backend
