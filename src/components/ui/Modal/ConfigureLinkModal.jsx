@@ -40,7 +40,12 @@ LinkFunction.propTypes = {
   functionIcon: PropTypes.string.isRequired,
 };
 
-function ConfigureLinkModal({ isOpen, setIsOpen, originalLink }) {
+function ConfigureLinkModal({
+  isOpen,
+  setIsOpen,
+  originalLink,
+  handlerFunction,
+}) {
   // const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
   const closeModal = () => setIsOpen(false);
@@ -64,9 +69,62 @@ function ConfigureLinkModal({ isOpen, setIsOpen, originalLink }) {
               />
             ))}
           </div>
+          <div className="mt-8">
+            <h5>Link Protect</h5>
+            <div className="flex gap-5">
+              <div className="h-8 w-7 bg-red-400" />
+              <div className="h-8 w-7 bg-red-400" />
+            </div>
+
+            <label htmlFor="linkPassword" className="w-full">
+              <p className="text-sm text-gray-300">Your password</p>
+              <input
+                type="password"
+                className="form-control p-3 rounded flex-1 w-full bg-opacity-50 bg-gray-800"
+                id="linkPassword"
+                aria-describedby="Link Protect Password"
+                placeholder="Enter password"
+              />
+            </label>
+          </div>
+          <div className="mt-8">
+            <h5>Link Timeout</h5>
+
+            <div className="flex gap-3 items-center">
+              <button type="button">30m</button>
+              <button type="button">2hr</button>
+              <button type="button">1day</button>
+              <label htmlFor="linkTimeout" className="w-full">
+                {/* <p>Link timeout duration (in hours)</p> */}
+                <input
+                  type="number"
+                  className="form-control p-3 rounded flex-1 w-full bg-opacity-50 bg-gray-800"
+                  id="linkTimeout"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter timeout duration in hours"
+                />
+              </label>
+            </div>
+          </div>
+          <div className="mt-8">
+            <h5>Click Limit</h5>
+
+            <label htmlFor="linkTimeout" className="w-full">
+              {/* <p>Link timeout duration (in hours)</p> */}
+              <input
+                type="number"
+                className="form-control p-3 rounded flex-1 w-full bg-opacity-50 bg-gray-800"
+                id="linkTimeout"
+                aria-describedby="emailHelp"
+                placeholder="Number of total clicks allowed"
+              />
+            </label>
+          </div>
           <div className="mt-3 flex items-center justify-center sm:justify-end gap-3 pt-8">
-            <Button variant="secondary">Cancel</Button>
-            <Button>Create link</Button>
+            <Button onClick={closeModal} variant="secondary">
+              Cancel
+            </Button>
+            <Button onClick={handlerFunction}>Create link</Button>
           </div>
         </div>
       </ModalWrapper>
