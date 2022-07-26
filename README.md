@@ -29,9 +29,9 @@ LinkCtrl has a simple and intuitive interface, and is designed to be easy to use
 - Add loading to Button component
 - Update button colors
 - Update register page
-- Fix alignments in project page
+- [x] Fix alignments in project page
 - Add graphs to project page
 - Create settings page
-- Make navigation routing work
+- [x] Make navigation routing work
 - Finish create link dialog
 - Connect to backend
