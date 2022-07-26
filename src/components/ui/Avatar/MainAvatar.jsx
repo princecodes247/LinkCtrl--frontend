@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 function MainAvatar({ user }) {
   // const { isLink } = props;
   return (
-    <div className="bg-green-400 p-5 text-center py-3 flex-1">
+    <div className="flex items-center gap-4">
+      <div className="bg-green-400 rounded-full p-5 text-center flex-1" />
       <p>{user.name}</p>
     </div>
   );
