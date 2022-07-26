@@ -7,13 +7,26 @@ import clsx from 'clsx';
 const styles = (override, variant, outline, classNames) =>
   clsx([
     !override && [
-      variant === 'secondary'
-        ? [
-            outline
-              ? 'border border-white'
-              : 'bg-gray-600 bg-opacity-60 hover:bg-opacity-80',
-          ]
-        : 'bg-green-400 hover:brightness-110',
+      variant === 'primary'
+        ? 'bg-green-400 hover:brightness-110'
+        : [
+            variant === 'secondary' && [
+              outline
+                ? 'border border-white'
+                : 'bg-gray-600 bg-opacity-60 hover:bg-opacity-80',
+            ],
+            variant === 'warning' && [
+              outline
+                ? 'border border-white'
+                : 'bg-red-600 hover:brightness-110',
+            ],
+            variant === 'transparent' && [
+              outline
+                ? 'border border-white'
+                : 'bg-gray-600 bg-opacity-0 hover:bg-opacity-10 rounded-full px-0 py-0 h-12 w-12',
+            ],
+          ],
+
       'px-8 py-3 rounded text-center text-white active:brightness-75',
     ],
     classNames,
@@ -21,7 +34,7 @@ const styles = (override, variant, outline, classNames) =>
 function Button({
   to,
   override,
-  variant,
+  variant = 'primary',
   outline,
   classNames,
   children,
