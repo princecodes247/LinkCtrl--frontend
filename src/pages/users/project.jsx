@@ -8,15 +8,15 @@ function Project() {
   const params = useParams();
   return (
     <DashboardLayout>
-      <nav className="flex justify-between py-8 px-16">
+      <nav className="flex flex-col text-center md:flex-row md:text-center gap-4 justify-between py-8 px-16">
         <h1 className="text-3xl">Ebis Campaign</h1>
 
         <div className="flex gap-2">
-          <Button>Deactivate</Button>
-          <Button>Deactivate</Button>
+          <Button classNames="flex-1">Deactivate</Button>
+          <Button classNames="flex-1">Deactivate</Button>
         </div>
       </nav>
-      <section className="flex gap-8 px-16 items-stretch">
+      <section className="flex flex-col md:flex-row gap-8 px-16 items-stretch">
         <div className="flex-1 bg-gray-900 ">
           <p>image</p>
         </div>

@@ -1,5 +1,4 @@
 // import React from 'react';
-// import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { DashboardLayout } from '../../components/layouts';
 import Button from '../../components/ui/Button';
@@ -16,10 +15,10 @@ function Dashboard() {
   // const
 
   const isLink = (link) => {
-    if (link) {
-      const a = '';
-    }
-    return true;
+    const res = link.match(
+      /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
+    );
+    return res !== null;
   };
 
   useEffect(() => {});
