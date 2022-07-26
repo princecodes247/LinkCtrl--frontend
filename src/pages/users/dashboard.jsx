@@ -1,13 +1,45 @@
 // import React from 'react';
 // import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DashboardLayout } from '../../components/layouts';
 import Button from '../../components/ui/Button';
 import ProjectCard from '../../components/ui/ProjectCard';
 import { ConfigureLinkModal, Dialog, Modal } from '../../components/ui/Modal';
 
 function Dashboard() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isConfigureLinkModalOpen, setIsConfigureLinkModalOpen] =
+    useState(false);
+  const [newLink, setNewLink] = useState('');
+  const [isResultModalOpen, setIsResultModalOpen] = useState(false);
+  const [result, setResult] = useState({});
+
+  // const
+
+  const isLink = (link) => {
+    if (link) {
+      const a = '';
+    }
+    return true;
+  };
+
+  useEffect(() => {});
+
+  const handleCreateLink = (data) => {
+    const newResult = {
+      success: true,
+    };
+    setIsConfigureLinkModalOpen(false);
+    setResult(newResult);
+    setIsResultModalOpen(true);
+  };
+  const handleShortenRequest = (quickShort = true) => {
+    if (!isLink) return false;
+    if (quickShort) {
+      handleCreateLink({ newLink });
+      return;
+    }
+    setIsConfigureLinkModalOpen(true);
+  };
 
   return (
     <DashboardLayout>
@@ -17,18 +49,34 @@ function Dashboard() {
             className="p-3 rounded flex-1 bg-opacity-50 bg-gray-900"
             type="text"
             placeholder="Paste a link to shorten it..."
+            value={newLink}
+            onInput={(e) => setNewLink(e.target.value)}
           />
-          <div className="flex gap-2  justify-end">
-            <Button variant="secondary" onClick={() => {}}>
+          <div className="flex gap-2 md:justify-end">
+            <Button
+              variant="secondary"
+              classNames="grow"
+              onClick={() => handleShortenRequest()}
+            >
               Quick Shorten
             </Button>
-            <Button onClick={() => setIsModalOpen(true)}>Shorten it</Button>
+            <Button
+              classNames="grow"
+              onClick={() => handleShortenRequest(false)}
+            >
+              Shorten it
+            </Button>
           </div>
-          {/* <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} /> */}
+          <Modal
+            data={result}
+            isOpen={isResultModalOpen}
+            setIsOpen={setIsResultModalOpen}
+          />
           <ConfigureLinkModal
-            isOpen={isModalOpen}
-            setIsOpen={setIsModalOpen}
-            originalLink="www.google.com"
+            isOpen={isConfigureLinkModalOpen}
+            setIsOpen={setIsConfigureLinkModalOpen}
+            originalLink={newLink}
+            handlerFunction={handleCreateLink}
           >
             <p>Dialog</p>
           </ConfigureLinkModal>
@@ -36,14 +84,14 @@ function Dashboard() {
       </div>
       <nav className="flex justify-between p-4 mx-8">
         <h2 className="text-lg font-semibold">All Projects</h2>
-        <div>Filter</div>
+        {/* <div>Filter</div> */}
       </nav>
       <section className="">
         {/* <div>
           <p>No projects found</p>
           <Button>Create new project</Button>
         </div> */}
-        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-8 px-4">
+        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 xl:grid-cols-3 mx-8 px-4">
           {[1, 2, 3, 4, 4, 4, 4, 4].map((projectID) => (
             <ProjectCard projectID={projectID} />
           ))}
