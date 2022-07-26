@@ -1,17 +1,30 @@
 import React from 'react';
-import { Routes, Route, Link, Navigate, Outlet } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../../hooks';
 
-function ProtectedRoute({ user, redirectPath = '/landing' }) {
-  if (!user) {
-    return <Navigate to={redirectPath} replace />;
+function ProtectedRoute(ProtectedComponent, redirectPath = '/register') {
+  console.log(ProtectedComponent);
+  function HOC() {
+    const { token } = useAuth();
+    // const user = true;
+    console.log(token);
+    if (!token) {
+      console.log('navii');
+      return <Navigate to={redirectPath} replace />;
+    }
+
+    return <ProtectedComponent />;
   }
-
-  return <Outlet />;
+  return HOC;
 }
 
+ProtectedRoute.defaultProps = {
+  redirectPath: '/register',
+};
+
 ProtectedRoute.propTypes = {
-  user: PropTypes.object,
+  ProtectedComponent: PropTypes.node.isRequired,
   redirectPath: PropTypes.string,
 };
 

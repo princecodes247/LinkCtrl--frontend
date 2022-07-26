@@ -19,3 +19,19 @@ LinkCtrl has a simple and intuitive interface, and is designed to be easy to use
 - Link preview - Preview a link in a popup.
 - Link QR code - Generate a QR code for a link.
 - Link Tree - Generate a link tree.
+
+## TODO
+
+- Make modal have default images and custom images
+- Make modal require only the messages to be displayed
+- And functionality to Configure Link Modal
+- Create loading spinner component
+- Add loading to Button component
+- Update button colors
+- Update register page
+- [x] Fix alignments in project page
+- Add graphs to project page
+- Create settings page
+- [x] Make navigation routing work
+- Finish create link dialog
+- Connect to backend
